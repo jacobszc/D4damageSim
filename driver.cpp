@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
-#include "gear.cpp"
-#include "input.cpp"
+#include "input.h"
 
-using namespace std;
+
+
  
 
 
@@ -12,10 +12,17 @@ using namespace std;
 
  int main() {
  
-    input item;
+    input user;
+    user.getpiece();
 
-    item.getpiece();
-item.printStats();
+
+
+    gear helm(user.baseStats, HELM);
+
+    helm.printBaseStats();
+
+    
+
     
     
     

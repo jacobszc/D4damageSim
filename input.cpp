@@ -1,55 +1,63 @@
-#include <vector>
+
 #include<iostream>
+#include "gear.h"
+#include "input.h"
+
 using namespace std;
 
+// def constr
+input::input(){
 
-class input {
+    for(int i=0; i<4; i++) {
 
-public:
+        baseStats[i]=0;
+    }
+};
+
+////////////////////////////////////////////////////
 
 
-vector<int> inputStats;
 
-
-/// getters
-
-void getpiece(){
+void input::getpiece(){
   
-   int stat=0;
+   int stat;
+   
 
 
    bool entering = true;
    bool VALID_TOKEN = true;
    cout << "enter 1st stat then press enter: ";                          // get user input in form of consecutive integers and store them 1 by 1 into a vector of ints
    cin >> stat;
-
-   inputStats.push_back(stat);
+int i =0;
+   baseStats[i] = stat;
  
-
+ i++;
     while(entering) {
  
       cout << "enter next stat then press enter, if your done enter -1 ";
       cin >> stat;
       if(stat == -1) {
            entering = false;
+           break;
       }
 
-      inputStats.push_back(stat);
+      baseStats[i] = stat;
       
-
+   i++;
 
     };
 
+    
+
 };
+/// ////////////////////////////////////////////////////
+void input::printStats(){
 
-void printStats(){
 
-
-    for(int i =0; i < inputStats.size(); i++) {
-        cout << i+1 << ".) " << inputStats[i] << "\n" ;
+    for(int i =0; i < 4; i++) {
+        cout << i+1 << ".) " << baseStats[i] << "\n" ;
     
 
     }
-}
-
 };
+

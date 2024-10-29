@@ -9,7 +9,7 @@ class damage {
    };
 
 
-   int summation(vector<int>ADDI_STATS) {
+   int SUM_AS(vector<int>ADDI_STATS) {
       int sum = 0;
       for (int i = 0; i < ADDI_STATS.size(); i++) {
          sum += ADDI_STATS[i];
@@ -17,7 +17,7 @@ class damage {
       return sum;
    };
 
-    int multiplicativeSum(vector<int>MULT_STATS) {
+    int MULT_MS(vector<int>MULT_STATS) {
         int mult = 1;
         for (int i = 0; i < MULT_STATS.size(); i++) {
             mult *= MULT_STATS[i];

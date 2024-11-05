@@ -8,10 +8,7 @@ using namespace std;
 // def constr
 input::input(){
 
-    for(int i=0; i<4; i++) {
-
-        baseStats[i]=0;
-    }
+    input::getpiece();
 };
 
 ////////////////////////////////////////////////////
@@ -21,11 +18,14 @@ input::input(){
 void input::getpiece(){
   
    int stat;
+   int piece_type;
    
 
 
    bool entering = true;
    bool VALID_TOKEN = true;
+   cout << "enter piece type then press enter: ";
+   cin >> piece_type;
    cout << "enter 1st stat then press enter: ";                          // get user input in form of consecutive integers and store them 1 by 1 into a vector of ints
    cin >> stat;
 int i =0;

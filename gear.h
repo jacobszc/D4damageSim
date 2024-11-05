@@ -3,6 +3,22 @@
 
 #include "damage.h"
 
+struct set {
+
+   gear helm;
+   gear chest;
+   gear gloves;
+   gear pants;
+   gear boots;
+   gear OHW;
+   gear THW;
+   gear amulet;
+   gear ring;
+   gear OffH;
+
+     
+};
+
 
 enum GearType {
     HELM,  // 0
@@ -43,7 +59,7 @@ class gear: public damage {
 
      
     
-
+set newSet;
     // core stats ////
     int CoreStats[4];
    

@@ -1,0 +1,12 @@
+Parent class -> character
+when chcrater is instanced, it should create a chcarcter that inherits all the gear currently instanciated in the gear class, aswell as the enumereated
+chcratcer rtpe that will be used to initialze base stats for the chratcer 
+
+child of character -> Gear
+when gear is instantaed, it should make a call to the input class to request all the gear being input by the user and create a full set of gear
+to be passed to the chcratcer class instanced
+
+
+
+character() -> gear() -> input()
+

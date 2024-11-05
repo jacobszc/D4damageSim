@@ -27,14 +27,22 @@ class character {
           character() {
             hasGear =0;  // naked
           };
+
+          character(set set);
         
-       
+      void copy_set(set GEAR_SET);
 
 
 
+      
+
+
+     ////////////////////////////////////// vars /////////
+
+     set mySet; /// will inherit the set from gear   
 
 
 
+// overloaded equal operator to assign dear sets to gear sets
 };
-
 #endif

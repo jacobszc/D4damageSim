@@ -9,12 +9,12 @@ using namespace std;
 
 struct AVG_DAM_PARAM {
 
-   int MinWD;  // minimum weapon damage
+int MinWD;  // minimum weapon damage
 int MaxWD;  // u guessed it
 int SP; // skill percent
 int MSP; // main stat percent
 int SUM_ADDI; // will  store all additive stats after summation function
-vector<int> ADDI_STATS; // will store all additive stats
+vector<int> ADDI_STATS; // will store all additive stats to be summmed
 int MULT_SUMM; // will store all multiplicative stats after multiplication
 vector<int> MULT_STATS; // will store all multiplicative stats
 int GM; // global multiplier
@@ -50,8 +50,8 @@ public:
 
 ////////
 // damage calculation functions
-int summation(vector<int>ADDI_STATS);// sum all additive stats
-int multiplicativeSum(vector<int>MULT_STATS); // multiply all multiplicative stats
+int SUM_AS(vector<int>ADDI_STATS);// sum all additive stats
+int MULT_MS(vector<int>MULT_STATS); // multiply all multiplicative stats
 int CALC_AVG_DAM(AVG_DAM_PARAM x); // calculate average damage
 
 
